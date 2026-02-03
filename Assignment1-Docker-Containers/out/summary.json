@@ -1,0 +1,30 @@
+{
+  "total_trips": 3,
+  "avg_fare_by_city": [
+    {
+      "city": "Charlotte",
+      "avg_fare": 16.25
+    },
+    {
+      "city": "New York",
+      "avg_fare": 10.9
+    }
+  ],
+  "top_by_minutes": [
+    {
+      "city": "Charlotte",
+      "minutes": 21,
+      "fare": 20.0
+    },
+    {
+      "city": "Charlotte",
+      "minutes": 12,
+      "fare": 12.5
+    },
+    {
+      "city": "New York",
+      "minutes": 9,
+      "fare": 10.9
+    }
+  ]
+}
