@@ -65,7 +65,7 @@ docker exec -it postgres1 psql -d postgres -U postgres
 
 ## Issues Encountered
 
-See the [Issues](../../issues) tab for detailed error logs and solutions.
+See the [Issues](https://github.com/darpan02-cypher/Cloud-Computing-Course/issues) tab for detailed error logs and solutions.
 
 ## What I Learned
 
