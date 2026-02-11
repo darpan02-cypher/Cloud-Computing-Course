@@ -1,1 +1,7 @@
-# Create your own input dataset
+  Hello world
+  Hello I am Himanshi
+  I am persuing MS IT
+  From UNCC
+  Hello Hadoop
+  Hadoop is powerful
+  Hadoop is used for big data
