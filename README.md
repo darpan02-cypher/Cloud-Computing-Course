@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Music Streaming Analysis Using Spark Structured APIs
 
 ## Overview

@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: appuser      # Database username
+      POSTGRES_PASSWORD: secretpw # Database password
+      POSTGRES_DB: appdb          # Database name
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U appuser -d appdb"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile.app
+    depends_on:
+      db:
+        condition: service_healthy  # Wait until database is ready
+    environment:
+      DB_HOST: db           # Service name from above (Docker's internal DNS)
+      DB_PORT: "5432"       # PostgreSQL default port
+      DB_USER: appuser      # MUST MATCH POSTGRES_USER above
+      DB_PASS: secretpw     # MUST MATCH POSTGRES_PASSWORD above
+      DB_NAME: appdb        # MUST MATCH POSTGRES_DB above
+      APP_TOP_N: "10"       # How many top trips to show
+    volumes:
+      - ./out:/out          # Map local ./out folder to container's /out folder
