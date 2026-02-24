@@ -57,3 +57,6 @@ Before starting the assignment, ensure you have the following software installed
    ```
 
 ## Errors and Resolutions
+=======
+# Cloud-Computing-Course
+>>>>>>> 417ab3266e610720457774aac0d79658e8567f08
